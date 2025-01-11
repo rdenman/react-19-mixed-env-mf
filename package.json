@@ -1,0 +1,15 @@
+{
+  "name": "react-19-mixed-env-mf",
+  "version": "1.0.0",
+  "description": "Demo of React 19 not working when using module federation and mixed `NODE_ENV`s.",
+  "workspaces": [
+    "host",
+    "remote"
+  ],
+  "scripts": {
+    "start": "concurrently \"npm run dev -w host\" \"npm start -w remote\""
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.2"
+  }
+}
