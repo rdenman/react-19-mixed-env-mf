@@ -12,6 +12,8 @@ export default defineConfig({
       remotes: {
         remote: "remote@http://localhost:3011/mf-manifest.json",
       },
+      shareStrategy:
+        process.env.NODE_ENV === "development" ? "loaded-first" : undefined,
       shared: {
         ...dependencies,
         react: {

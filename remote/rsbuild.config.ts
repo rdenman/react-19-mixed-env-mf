@@ -13,6 +13,8 @@ export default defineConfig({
       exposes: {
         "./component": "./src/Component.tsx",
       },
+      shareStrategy:
+        process.env.NODE_ENV === "development" ? "loaded-first" : undefined,
       shared: {
         ...dependencies,
         react: {
