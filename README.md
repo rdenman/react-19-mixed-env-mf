@@ -4,16 +4,13 @@ Demo of React 19 not working when using module federation and mixed `NODE_ENV`s.
 
 ## Getting Started
 
-Run `npm i` in both directories. In `host`, run `npm run dev` to start the dev server
-(`NODE_ENV === 'development'`). In `remote`, run `npm run build` and `npm run preview` to start
-the preview server (`NODE_ENV === 'production'`).
+Run `npm i` and `npm start` from the root of this project. The `start` command will run
+the dev server for the host and will build the remote, followed by starting the remote's
+preview server.
 
 Visit http://localhost:3010 and look at the console. Note that nothing is rendered.
 
-Stop the preview server and run `npm run dev` from `remote`. Everything works as expected.
-
-Stop both servers and run `npm run build && npm run preview` for both `host` and `remote`. Everything
-again works as expected.
+Running both apps via the `npm run dev` command will not result in the same error.
 
 ### React 18
 
